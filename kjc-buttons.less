@@ -41,14 +41,11 @@
 
 
 .button, .button:visited {
-	background: #222;
 	display: inline-block;
 	padding: 5px 10px 5px;
-	color: white;
 	text-decoration: none;
 	.rounded(@btn-radius);
 	.box-shadow(@btn-drop-shadow);
-	border-top: 1px solid rgba(255, 255, 255, .75);
 	border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 	position: relative;
 	cursor: pointer;
@@ -59,7 +56,13 @@
 	color: #fff;
 }
 
+.disabled.button {
+	cursor: default;
+	opacity: .3;
+}
 
+
+// SIZES
 
 .tiny.button, .small.button:visited { 
 	font-size: 10px;
@@ -68,31 +71,37 @@
 
 .small.button, .small.button:visited { 
 	font-size: 11px;
+	
+	&.round { .rounded(11px); }
 }
 
 .button, .button:visited,
 .medium.button, .medium.button:visited {
 	font-size: 13px; 
 	font-weight: bold; 
-	line-height: 1; 
-	text-shadow: 0 -1px 1px rgba(0,0,0,0.25); 
+	line-height: 1;
+	color: #fff;
+	text-shadow: 0 -1px 0px rgba(0,0,0,0.25);
+	.button-color( #333, #666, #999);
+	
+	&.round { .rounded(12px); }
 }
 
 .large.button, .large.button:visited {
 	font-size: 14px; 
 	padding: 8px 14px 9px;
+	
+	&.round { .rounded(16px); }
 }
 													  
 .super.button, .super.button:visited,
 .huge.button, .huge.button:visited {
 	font-size: 34px; 
 	padding: 8px 14px 9px;
+	
+	&.round { .rounded(26px); }
 }
 
-.disabled.button {
-	cursor: default;
-	opacity: .3;
-}
 
 
 // COLORS
@@ -101,7 +110,7 @@
 .blue.button, .blue.button:visited		    { .button-color( #3671c0, #4da0f7, #78bdfb); }
 .red.button, .red.button:visited		    { .button-color( #c53138, #ea3b43, #ff8185); }
 .green.button, .green.button:visited		{ .button-color( #609b5a, #7ac673, #92d48f); }
-.yellow.button, .yellow.button:visited		{ .button-color( #e6bb29, #ffd343, #ffeb80); color: #6f6d71;  text-shadow: rgba(255,255,255,.5) -1px 1px 0 }
+.yellow.button, .yellow.button:visited		{ .button-color( #e6bb29, #ffd343, #ffeb80); color: #6f6d71;  text-shadow: rgba(255,255,255,.5) 0px 1px 0 }
 .clear.button								{ background: none; border: transparent; .box-shadow(none);}
 
 
