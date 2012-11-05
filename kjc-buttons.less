@@ -8,6 +8,8 @@
 	@since 2012-10-18
 */
 
+@import url('kjc-icon-font.less');
+
 // constants
 @btn-radius: 3px;
 @btn-drop-shadow: 0 0px 2px rgba(0,0,0,0.5);
@@ -56,18 +58,12 @@
 	color: #fff;
 }
 
-.disabled.button {
-	cursor: default;
-	opacity: .3;
-}
-
-
-// SIZES
 
 .tiny.button, .small.button:visited { 
 	font-size: 10px;
 	padding: 3px 7px;
 }
+
 
 .small.button, .small.button:visited { 
 	font-size: 11px;
@@ -102,6 +98,10 @@
 	&.round { .rounded(26px); }
 }
 
+.disabled.button {
+	cursor: default;
+	opacity: .3;
+}
 
 
 // COLORS
@@ -111,13 +111,13 @@
 .red.button, .red.button:visited		    { .button-color( #c53138, #ea3b43, #ff8185); }
 .green.button, .green.button:visited		{ .button-color( #609b5a, #7ac673, #92d48f); }
 .yellow.button, .yellow.button:visited		{ .button-color( #e6bb29, #ffd343, #ffeb80); color: #6f6d71;  text-shadow: rgba(255,255,255,.5) 0px 1px 0 }
-.clear.button								{ background: none; border: transparent; .box-shadow(none);}
+.clear.button								{ background: none; border: transparent; .box-shadow(none); color: #424143;}
 
 
 
 // ICON - button with icon
 
-.button.icon {
+.button.icon { // deprecated
 	padding: 5px 7px 5px 7px;
 	
 	&.hasLabel {
@@ -126,6 +126,34 @@
 		img {height: .8em; margin-right: 3px;}
 	}
 }
+
+// Fontello font class
+.button[class^="icon-"],
+.button[class*=" icon-"] {
+	
+	&:before {
+		margin-right: .4em;
+		vertical-align: bottom;
+	}
+	
+	&.icon-only {
+		padding: 5px 7px 5px 7px;
+	}
+	
+	&.icon-only:before {
+		margin-right: -2px;
+		margin-left: -2px;
+	}
+	
+	&.large, &.super, &.huge {
+		&:before {
+			line-height: .85em;
+			font-size: 1.2em;
+		}
+	}
+}
+
+
 
 
 // BUTTON GROUP
