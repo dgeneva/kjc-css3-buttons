@@ -11,7 +11,9 @@ Easily add more colors by using the LESS mixin:
 
 ```css
 .button-color(@dark, @light, @highlight)
+```
 
-
+Example:
 ```css
 .blue.button, .blue.button:visited { .button-color( #3671c0, #4da0f7, #78bdfb); }
+```
