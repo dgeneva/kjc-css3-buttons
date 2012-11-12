@@ -27,10 +27,6 @@
 	-moz-box-shadow: @btn-drop-shadow, 0 1px 0px @highlight inset;
 	box-shadow: @btn-drop-shadow, 0 1px 0px @highlight inset;
 	
-	.transition(-webkit-box-shadow, 120ms);
-	.transition(-moz-box-shadow, 120ms);
-	.transition(box-shadow, 120ms);
-	
 	&:hover {
 		-webkit-box-shadow: @btn-drop-shadow-hover, 0 1px 0px @highlight inset;
 		-moz-box-shadow: @btn-drop-shadow-hover, 0 1px 0px @highlight inset;
@@ -54,6 +50,10 @@
 	position: relative;
 	cursor: pointer;
 	font-family: Helvetica, Arial, sans-serif;
+	
+	.transition(-webkit-box-shadow, 120ms);
+	.transition(-moz-box-shadow, 120ms);
+	.transition(box-shadow, 120ms);
 }
 
 .button:hover {
